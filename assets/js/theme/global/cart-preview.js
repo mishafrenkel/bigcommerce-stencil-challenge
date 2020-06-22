@@ -22,6 +22,11 @@ export default function (secureBaseUrl, cartId) {
         if (utils.tools.storage.localStorageAvailable()) {
             localStorage.setItem('cart-quantity', quantity);
         }
+
+        // if (quantity > 0) {
+        //     alert('ITEM ADDED TO CART')
+        // }
+
     });
 
     $cart.on('click', event => {

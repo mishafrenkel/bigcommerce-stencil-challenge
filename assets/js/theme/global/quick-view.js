@@ -25,4 +25,7 @@ export default function (context) {
             return new ProductDetails(modal.$content.find('.quickView'), context);
         });
     });
+
+
+
 }

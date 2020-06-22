@@ -266,6 +266,7 @@ export default class Cart extends PageManager {
         const $couponContainer = $('.coupon-code');
         const $couponForm = $('.coupon-form');
         const $codeInput = $('[name="couponcode"]', $couponForm);
+        const $addToCart = $('button#addAll');
 
         $('.coupon-code-add').on('click', event => {
             event.preventDefault();
@@ -275,6 +276,7 @@ export default class Cart extends PageManager {
             $('.coupon-code-cancel').show();
             $codeInput.trigger('focus');
         });
+
 
         $('.coupon-code-cancel').on('click', event => {
             event.preventDefault();
