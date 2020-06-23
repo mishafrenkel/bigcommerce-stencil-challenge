@@ -2,3 +2,5 @@ node_modules
 .stencil
 z-lv.out
 assets/dist
+test.http
+n.js

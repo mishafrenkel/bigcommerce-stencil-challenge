@@ -6,6 +6,8 @@ category:
 ---
 {{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
 {{inject "categoryId" category.id}}
+{{inject "products" category.products}}
+{{inject "cart" cart}}
 {{#partial "head"}}
     {{#if pagination.category.previous}}
         <link rel="prev" href="{{pagination.category.previous}}">
@@ -44,9 +46,16 @@ category:
     <!-- <a href="/cart.php?action=add&product_id=112" data-event-type="product-click"  class="button button--small card-figcaption-button">{{lang 'products.add_to_cart'}}</a> -->
 </button>
 {{/if}}
+<!-- <ul>
+{{#each category.products}}
+  <li>{{id}}</li>
+</ul> -->
+<!-- {{/each}} -->
+
 
 <!-- <a href="https://https://frenkel-store.mybigcommerce.com/cart.php?action=buy&sku=Misha-2011">Purchase Our New Product Now!</a> -->
 <div class="page">
+    <!-- {{{JSONstringify category.products}}} -->
 
     {{#if category.faceted_search_enabled}}
         <aside class="page-sidebar" id="faceted-search-container">

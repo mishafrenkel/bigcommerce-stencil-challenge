@@ -7,6 +7,7 @@ import collapsibleFactory from './common/collapsible';
 import ProductDetails from './common/product-details';
 import videoGallery from './product/video-gallery';
 import { classifyForm } from './common/form-utils';
+import $ from 'jquery';
 
 export default class Product extends PageManager {
     constructor(context) {
@@ -65,4 +66,5 @@ export default class Product extends PageManager {
             this.$bulkPricingLink.trigger('click');
         }
     }
+
 }
