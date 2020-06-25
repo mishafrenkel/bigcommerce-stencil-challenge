@@ -32,8 +32,10 @@ const pageClasses = {
     brand: () => import('./theme/brand'),
     brands: noop,
     cart: () => import('./theme/cart'),
+    card: () => import('./theme/card.js'),
     category: () => import('./theme/category'),
     compare: () => import('./theme/compare'),
+
     page_contact_form: () => import('./theme/contact-us'),
     error: noop,
     404: noop,

@@ -28,6 +28,12 @@
     max-width: get-width(stencilString('productgallery_size'));
 
     @include lazy-loaded-padding('productgallery_size');
+    &:hover {
+        img {
+            src: url('https://cdn11.bigcommerce.com/s-y1u694wcey/images/stencil/{:size}/products/112/378/imac3__29148.1592608319.jpg?c=1');
+            z-index: 1000;
+        }
+    }
 }
 
 .card-figcaption {
@@ -54,6 +60,7 @@
     object-fit: contain;
     /* Object-fit polyfill */
     font-family: 'object-fit: contain;';
+
 }
 
 .card-title {
@@ -102,6 +109,7 @@
     @include breakpoint("small") {
         text-align: left;
     }
+
 }
 
 

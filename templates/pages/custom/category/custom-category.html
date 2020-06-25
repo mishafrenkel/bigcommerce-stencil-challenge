@@ -37,12 +37,26 @@ category:
 {{/unless}}
 {{{category.description}}}
 
+<h1>CUSTOM TEMPLATE</h1>
+<button  id="addAll" class="button button--primary" type="button" >Add to Cart
+    <!-- <a href="/cart.php?action=add&product_id=112" data-event-type="product-click"  class="button button--small card-figcaption-button">{{lang 'products.add_to_cart'}}</a> -->
+</button>
 
 
-<!-- <a href="https://https://frenkel-store.mybigcommerce.com/cart.php?action=buy&sku=Misha-2011">Purchase Our New Product Now!</a> -->
+
+{{#if category.products.[0].qty_in_cart '!==' 0 }}
+}
+<button  id="removeAll"  class="button button--primary" >Remove All Items
+    <!-- <a href="/cart.php?action=add&product_id=112" data-event-type="product-click"  class="button button--small card-figcaption-button">{{lang 'products.add_to_cart'}}</a> -->
+</button>
+{{/if}}
+<!-- <ul>
+{{#each category.products}}
+  <li>{{id}}</li>
+</ul> -->
+<!-- {{/each}} -->
+
 <div class="page">
-    <!-- {{{JSONstringify category.products}}} -->
-
     {{#if category.faceted_search_enabled}}
         <aside class="page-sidebar" id="faceted-search-container">
             {{> components/category/sidebar}}
